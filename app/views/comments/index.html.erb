@@ -4,12 +4,7 @@
 <%= render 'form', comment: Comment.new %>
 
 <div id="comments">
-  <% @comments.each do |comment| %>
-    <%= render comment %>
-    <p>
-      <%= comment.body %>
-    </p>
-  <% end %>
+  <%= render @comments %>
 </div>
 
 <%= link_to "New comment", new_comment_path %>
